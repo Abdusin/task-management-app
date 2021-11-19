@@ -6,4 +6,7 @@ class AppAssets {
   static const String note = 'assets/note.png';
   static const String notification = 'assets/notification.png';
   static const String phone = 'assets/phone.png';
+  static const String corner = 'assets/corner.png';
+  static const String plus = 'assets/plus.png';
+  static const String team = 'assets/team.png';
 }
