@@ -8,6 +8,7 @@ import 'package:task_management_app/utils/AppAssets.dart';
 import 'package:task_management_app/utils/AppSpaces.dart';
 import 'package:task_management_app/widgets/TaskCard.dart';
 import 'package:task_management_app/widgets/Scrollbar.dart';
+import 'package:task_management_app/widgets/buttons.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -199,53 +200,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-class DayButton extends StatelessWidget {
-  const DayButton({
-    Key? key,
-    required this.dayNumber,
-    required this.character,
-    required this.isSelected,
-    required this.onTap,
-  }) : super(key: key);
-  final int dayNumber;
-  final String character;
-  final bool isSelected;
-  final VoidCallback onTap;
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: isSelected ? Get.theme.primaryColor : Colors.white,
-            border: Border.all(color: isSelected ? Get.theme.primaryColor : Get.theme.colorScheme.secondary)),
-        child: Column(children: [
-          Spacer(flex: 10),
-          Text(
-            '$fixedDayNumber',
-            style: TextStyle(
-              color: isSelected ? Colors.white : Colors.black,
-              fontSize: 22,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-          Spacer(flex: 10),
-          Text(
-            '$character',
-            style: TextStyle(
-              color: isSelected ? Colors.white : Get.theme.colorScheme.secondary,
-            ),
-          ),
-          Spacer(flex: 5),
-        ]),
-      ),
-    );
-  }
-
-  String get fixedDayNumber => dayNumber < 10 ? '0$dayNumber' : '$dayNumber';
 }

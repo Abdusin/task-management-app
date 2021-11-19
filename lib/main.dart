@@ -15,14 +15,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Task Manager',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          primaryColor: Color(0xff429AE0),
-          colorScheme: ColorScheme.light(
-            secondary: Color(0xff99C8F0),
-          ),
-          canvasColor: Color(0xff232323),
-          fontFamily: 'local-inter'),
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Color(0xff429AE0),
+        colorScheme: ColorScheme.light(
+          secondary: Color(0xff99C8F0),
+        ),
+        canvasColor: Color(0xff232323),
+        fontFamily: 'local-inter',
+      ),
+      defaultTransition: Transition.cupertino,
       home: HomeScreen(),
     );
   }
